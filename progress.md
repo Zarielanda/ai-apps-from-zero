@@ -9,7 +9,7 @@
 - [x] Day 3
 - [x] Day 4
 - [x] Day 5
-- [ ] Day 6
+- [x] Day 6
 - [ ] Day 7 复盘
 
 ### 本周学到的三个概念
@@ -52,6 +52,12 @@
 - 成功输出本周任务状态，预计总时长为 225 分钟。
 - 巩固练习：完成 AI 提示词测试清单，统计 3 项测试的总分 215、平均分约 71.67、通过次数 2。
 - 修复 `NameError`：循环变量名应为 `test`，不能误写成未定义的 `tests`。
+
+### Day 6 学习记录
+
+- 完成命令行学习记录器：可重复输入学习内容与分钟数，保存多条记录、汇总当天时长并判断学习状态。
+- 理解 `records`（所有记录的列表）与 `record`（单条记录字典）的层级；用 `records.append(record)` 保存新记录。
+- 亲手完成 Git 流程：`git status`、`git add learning_logger.py`、`git commit -m "完成第一周学习记录器"`、`git push origin main`。
 
 ### 下周需要调整的地方
 

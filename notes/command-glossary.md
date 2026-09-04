@@ -168,3 +168,35 @@ for test in prompt_tests:
 
 - `prompt_tests` 是整个列表，不能直接用 `prompt_tests["score"]` 取值。
 - `test` 是当前循环取出的一个字典，所以用 `test["score"]` 取分数。
+
+## 列表追加与循环控制
+
+| 词汇 / 语法 | 含义 | 示例 |
+| --- | --- | --- |
+| `.append()` | 列表的方法：将一个值添加到列表末尾，直接修改原列表。 | `records.append(record)` |
+| `break` | 立刻结束当前循环，程序接着执行循环之后的代码。 | `if answer != "y": break` |
+| `\n` | 字符串中的换行符；输出前可留出空行。 | `print("\n今天的学习记录：")` |
+| 方法调用 | 用 `对象.方法(参数)` 调用对象自带的功能。 | `records.append(record)` |
+
+## Git 基础工作流
+
+| 命令 / 词汇 | 含义 | 示例 |
+| --- | --- | --- |
+| `git status` | 查看仓库、暂存区和工作区的当前状态。 | 查看未跟踪或未提交的文件。 |
+| Untracked | Git 发现了文件，但尚未开始跟踪它。 | `learning_logger.py` 初建后。 |
+| `git add 文件名` | 将文件放入暂存区，准备提交。 | `git add learning_logger.py` |
+| Staged / Changes to be committed | 已暂存，下一次提交会包含这些改动。 | `new file: learning_logger.py` |
+| `git commit -m "说明"` | 将暂存内容保存为一条本地版本历史，并附提交说明。 | `git commit -m "完成第一周学习记录器"` |
+| `git push origin main` | 将本地 `main` 分支的新提交上传到远程仓库 `origin` 的 `main` 分支。 | 同步到 GitHub。 |
+| `origin` | 本机给远程 GitHub 仓库起的默认别名。 | `https://github.com/Zarielanda/ai-apps-from-zero.git` |
+| `main` | 当前仓库的主分支名称。 | `On branch main` |
+
+### Git 提交流程
+
+```text
+文件修改 / 新建
+  → git status（检查）
+  → git add（暂存）
+  → git commit（保存本地历史）
+  → git push（公开同步到 GitHub）
+```
