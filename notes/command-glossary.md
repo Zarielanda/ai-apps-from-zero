@@ -136,6 +136,7 @@
 | 值（value） | 与键对应的实际数据。 | `60`、`False` |
 | `字典["键"]` | 按键从字典中取出对应值。 | `task["name"]` |
 | `列表[位置]` | 按位置从列表中取项目；第一个位置是 0。 | `weekly_tasks[0]` |
+| `len()` | 返回容器中项目的数量。 | `len(prompt_tests)` 得到 `3` |
 | `True` / `False` | 布尔值；常用于记录“是否完成”等状态。 | `"completed": False` |
 
 ## 常见括号与符号
@@ -157,3 +158,13 @@ print(f"{task['name']}：{task['estimated_minutes']} 分钟，{status}")
 - `f"..."`：一段可插入值的文字。
 - `{...}`：计算并插入其中的结果。
 - `task['name']`：从当前任务字典取出 `name` 对应的值；这里的 `[]` 是取值，不是创建列表。
+
+### 列表与循环变量的层级
+
+```python
+for test in prompt_tests:
+    score = test["score"]
+```
+
+- `prompt_tests` 是整个列表，不能直接用 `prompt_tests["score"]` 取值。
+- `test` 是当前循环取出的一个字典，所以用 `test["score"]` 取分数。
